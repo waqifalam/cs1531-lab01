@@ -4,7 +4,7 @@
 ## 1. Sign up for GitHub  browser
 Github is a version control platform (like Bitbucket of GitLab) that uses git. It is a great way for developers to collaborate with one another. It will be the primary source of starter code distribution as well as where you will submit labs/assignments for automarking before being marked by your tutors. You will have to create an account here before you can start. Getting familiar with Github and how to use is is the aim of this lab.
 
-**Summary:** 
+**Summary:**
  - I DON'T have an account on Github: Create an account at Github using your student (zID@unsw.edu.au) email.
  - I ALREADY have an account on Github: Continue to the next step.
 
@@ -19,7 +19,7 @@ A Github organisation is a way that people can work together and have group owne
 There are two ways to authenticate with Github when you are working on your own machine:
  1. Use your username and password everytime
  2. Authenticate using your SSH key
- 
+
 Option 1 can get quite tedious when working consistently so we will be using the second option. Open up a terminal and run the following commands in terminal (use the email you have used for GitHub):
 
 **Summary:**
@@ -29,7 +29,7 @@ Option 1 can get quite tedious when working consistently so we will be using the
  4. Copy the entire output of the above command, including the ssh-rsa at the start
  5. Go to https://github.com/settings/keys and click **New SSH Key**
  6. Enter your name as the title and paste the key (copied in the above step) into the text field
- 
+
 # Laboratory
 
 ## 1. Clone your first repo
@@ -71,7 +71,7 @@ git push # Push
 1. Add a new file called `first.txt` in the repo directory
 1. Add a line of text to the bottom of the first.txt file in the repo you have just cloned using your favourite text editor and save.
 2. Go back to your terminal and enter the following commands:
-3. 
+3.
 ```bash
 git add first.txt`
 git commit -m"Added a line to the first file"
@@ -148,6 +148,7 @@ This is a very simple example, but merge conflicts can be large and in many diff
 3. Add, commit and push the resolved merge conflict
 
 # Python Introduction
+Create a new branch called `python_exercises` to complete the following exercises. Remember to merge back into master when you are finished.
 ## 1. Hello World
 You have been introduced to python in week 1 so we will just get familiar with creating and running simple python programs. Python is an interpreted language so does not require and compilation like C does. That means executing python programs is as simple as one command.
 
@@ -167,7 +168,7 @@ We will use a list  to add up some integers in this exercise. (HINT: the python 
 
 **Summary:**
 1. Open the `integer.py` file
-2. Line 1 has declared a list of integers. You are required to add the number 6 to the list and then add all of the numbers up using a `for` loop and print out the result
+2. Line 1 has declared a list of integers. You are required to add the number 6 to the list (using the `append` function) and then add all of the numbers up using a `for` loop and print out the result
 3. Make the required edits to complete the above goal and run the `integer.py` in the same way you ran `hello.py`
 4. At the bottom of the file add the line
 ```python
@@ -180,7 +181,7 @@ Strings in python are far simpler than int C (char*) and can be used like any ot
 
 Strings can be indexed from with both positive indexes. Positive indexes work like you would expect, starting at 0 and ending at the length of the string. Negative indexes start at -1 and work their way from the back. Note that strings in python are not null terminated.
 
-You can also get a range of characters from a string using the syntax `[begin:end]` (begin is included and end is excluded). 
+You can also get a range of characters from a string using the syntax `[begin:end]` (begin is included and end is excluded).
 ```python
 test = "hey there you!"
 print(test[0]) # Will print 'h'
@@ -210,6 +211,7 @@ Note that there is **NO** trailing space in the output.
 print(' '.join(strings))
 ```
 5. Commit your changes to GitHub
+6. Merge your `python_exercises` branch into `master`
 # Show your tutor and finish
 That's it for the first lab, please show your tutor your work and get them to mark you off.
 
