@@ -1,10 +1,10 @@
 
 # Introduction to GitHub
 # Setup
-## 1. Sign up for GitHub  browser
+## 1. Sign up for GitHub 
 Github is a version control platform (like Bitbucket of GitLab) that uses git. It is a great way for developers to collaborate with one another. It will be the primary source of starter code distribution as well as where you will submit labs/assignments for automarking before being marked by your tutors. You will have to create an account here before you can start. Getting familiar with Github and how to use is is the aim of this lab.
 
-**Summary:**
+**Summary:** 
  - I DON'T have an account on Github: Create an account at Github using your student (zID@unsw.edu.au) email.
  - I ALREADY have an account on Github: Continue to the next step.
 
@@ -19,7 +19,7 @@ A Github organisation is a way that people can work together and have group owne
 There are two ways to authenticate with Github when you are working on your own machine:
  1. Use your username and password everytime
  2. Authenticate using your SSH key
-
+ 
 Option 1 can get quite tedious when working consistently so we will be using the second option. Open up a terminal and run the following commands in terminal (use the email you have used for GitHub):
 
 **Summary:**
@@ -29,7 +29,7 @@ Option 1 can get quite tedious when working consistently so we will be using the
  4. Copy the entire output of the above command, including the ssh-rsa at the start
  5. Go to https://github.com/settings/keys and click **New SSH Key**
  6. Enter your name as the title and paste the key (copied in the above step) into the text field
-
+ 
 # Laboratory
 
 ## 1. Clone your first repo
@@ -42,7 +42,7 @@ This is the process you will follow every lab to get your starter code.
 **Summary:**
  1. Go to https://cgi.cse.unsw.edu.au/~cs1531/18s1/github/run.cgi/ and got to the Labs tab.
  2. Select lab01 and click **Import**
- 3. Copy the link that is shown in the green banner that is flashed at the top of the screen to go to the place where the repo has been imported
+ 3. Follow the link that is shown in the green banner that is flashed at the top of the screen to go to the place where the repo has been imported
  5. Click on the Clone or download button.
  6. If the title for the dropdown box is *Clone with HTTPS* click on the Use SSH link on the right
  7. Copy the link in the text box
@@ -69,9 +69,9 @@ git push # Push
 ```
 **Summary:**
 1. Add a new file called `first.txt` in the repo directory
-1. Add a line of text to the bottom of the first.txt file in the repo you have just cloned using your favourite text editor and save.
+1. Add a line of text to the first.txt file using your favourite text editor and save.
 2. Go back to your terminal and enter the following commands:
-3.
+
 ```bash
 git add first.txt`
 git commit -m"Added a line to the first file"
@@ -80,7 +80,24 @@ git push
  4. MAKE SURE YOU UNDERSTAND THE PURPOSE OF EACH OF THE 3 ABOVE COMMANDS! If you are unsure about any of them, ask your tutor.
  5. Go back to GitHub and confirm that your changes have been pushed to the server.
 
-## 3. Create your first branch
+## 3. Do your first pull
+Usually when you are working with git, it is in a team. That means that you will not be the only one who is doing the changes. If someone else makes a change and pushes it to the server, your local changes will not have the most up to date version of the files. Luckily, git makes it easy to update our local copy of a repository with the `git pull` command. 
+
+This command checks the remote server that your local repo is linked to and makes sure that all of your files are up to date. This ensures that you don't accidentally do things like implement the same thing someone else has already done and also lets you use other peoples work (eg new functions) when developing locally.
+
+Pulling regularly is one of the the **most important** practices in order to use git effectively!
+
+Unfortunately, at the moment you are just working individually. But GitHub still gives us a nice way to practice a `git pull`. 
+
+**Summary:**
+1. View your repo on GitHub. (The same link as step 1 in section 1 of the Laboratory activities)
+2. Click on the `first.txt` file
+3. Click the small 'edit' pencil icon in the top right
+4. Make any change you want to this file and click the 'Commit Changes' button at the bottom of the screen
+5. This will have changed the `first.txt` file on the server but not on your local environment. To fetch these changes use the `git pull` command from your terminal
+6. Confirm that your version of `first.txt` now has the changes you made on the web page
+
+## 4. Create your first branch
 Branches are a vital part of git and are used so people can work on separate parts of the codebase and not interfere with one another or risk breaking a produect that is visible to the client. Breaking something on one branch does not have an impact on any other.
 
 Good use of git will involve separating parts of the project that can be worked on separately and having them in their own feature branch. These branches can then be merged when they are ready.
@@ -104,7 +121,7 @@ This means that the branch you tried to make a change on doesn't exist on the se
 
 **Note:** The final step above must be run on the 1st push to every new branch that you have created on your local machine. After you have run this once, you should go back to simply using git push
 
-## 4. Merge your two branches
+## 5. Merge your two branches
 Merging branches is used to combine the work done on two different branches and is where gits magic really comes in. Git will compare the changes done on both branches and decide (based on what changes were done to what sections of the file and when) what to keep. Merges are most often done when a feature branch is complete and ready to be integrated with the master branch.
 
 Since we have finished all that we are going to do (and think there are no bugs) on our first_new_branch we can merge it back into master. It is a strong recommendation to have a version of the code that at least runs on master so people are not completely blocked. (DO NOT PUSH BROKEN CODE TO MASTER)
@@ -123,7 +140,7 @@ git merge [target] # Merge the target branch into current
 `git merge first_new_branch`
 3. Push the successful merge to the server to update the master branch on the server
 
-## 5. Engineer a merge conflict :(
+## 6. Engineer a merge conflict :(
 Merge conflicts are the one necessary downside to git. Luckily, they can be avoided most of the time through good use of techniques like branches and regular commits, pushes and pulls. They happen when git cannot work out which particular change to a file you really want.
 
 For this step we will engineer one so you can get a taste of what they are, how they occur and how to fix them. This will be the LAST time you will want one. The process may seem involved but it is quite common when multiple people are working at a time.
@@ -137,10 +154,38 @@ For this step we will engineer one so you can get a taste of what they are, how 
 6. Merge master into your current branch
 7. This sequence of steps should made a merge conflict at the top of the `first.txt`
 
-## 6. Resolve your merge conflict :)
+## 7. Resolve your merge conflict :)
 Resolving a merge conflict is as simple as editing the file normally, choosing what you want to have in the places git wasn't sure.
 
 This is a very simple example, but merge conflicts can be large and in many different places across a file/repo. If possible, avoid merge conflicts. This can be done by regularly pulling from the server to update your local copy and by making your branches in such a way that they handle only one feature/section of the code.
+
+A merge conflict is physically shown in the file in which it occurs.
+`<<<<<<<` marks the beginning of the conflicting changes made on the **current** (merged into) branch.
+`=======` marks the beginning of the conflicting changes made on the **target** (merged) branch.
+`>>>>>>>` marks the end of the conflict zone.
+
+Eg
+```
+This line could be marged automatically.
+There was no change here either
+>>>>>>> current:sample.txt
+Merges are too hard. This change was on the 'merged into' branch
+=======
+Merges are easy. This change was made on the 'merged' branch
+<<<<<<< target:sample.txt
+This is another line that could be merged automatically
+```
+
+This above example could be solved in many ways, one way would be to just use the changes made on the target branch and delete those made on the current branch. Once we have decided on this we just need to remove the syntax. The resolved file would be as follows
+
+```
+This line could be marged automatically.
+There was no change here either
+Merges are easy. This change was made on the 'merged' branch
+This is another line that could be merged automatically
+```
+
+We would then just commit the resolved file and the merge conflict is finished!
 
 **Summary:**
 1. Open the `first.txt` file and decide which (or both) changes you want to keep
@@ -181,7 +226,7 @@ Strings in python are far simpler than int C (char*) and can be used like any ot
 
 Strings can be indexed from with both positive indexes. Positive indexes work like you would expect, starting at 0 and ending at the length of the string. Negative indexes start at -1 and work their way from the back. Note that strings in python are not null terminated.
 
-You can also get a range of characters from a string using the syntax `[begin:end]` (begin is included and end is excluded).
+You can also get a range of characters from a string using the syntax `[begin:end]` (begin is included and end is excluded). 
 ```python
 test = "hey there you!"
 print(test[0]) # Will print 'h'
@@ -212,6 +257,8 @@ print(' '.join(strings))
 ```
 5. Commit your changes to GitHub
 6. Merge your `python_exercises` branch into `master`
+
+
 # Show your tutor and finish
 That's it for the first lab, please show your tutor your work and get them to mark you off.
 
