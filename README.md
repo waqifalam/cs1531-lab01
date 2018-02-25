@@ -81,11 +81,11 @@ git push
  5. Go back to GitHub and confirm that your changes have been pushed to the server.
 
 ## 3. Do your first pull
-Usually when you are working with git, it is in a team. That means that you will not be the only one who is doing the changes. If someone else makes a change and pushes it to the server, your local changes will not have the most up to date version of the files. Luckily, git makes it easy to update our local copy of a repository with the `git pull` command. 
+Usually when you are using git, it is in a team. That means that you will not be the only one who is making the changes. If someone else makes a change and pushes it to the server, your local repo will not have the most up to date version of the files. Luckily, git makes it easy to update our local copy with the `git pull` command. 
 
-This command checks the remote server that your local repo is linked to and makes sure that all of your files are up to date. This ensures that you don't accidentally do things like implement the same thing someone else has already done and also lets you use other peoples work (eg new functions) when developing locally.
+This command checks the remote server that your local repo is linked to and makes sure that all of your files are up to date. This ensures that you don't accidentally do things like implement the same thing someone else has already done and also lets you use other peoples work (eg new functions) when developing.
 
-Pulling regularly is one of the the **most important** practices in order to use git effectively!
+Pulling regularly is one of the the **most important** in git!
 
 Unfortunately, at the moment you are just working individually. But GitHub still gives us a nice way to practice a `git pull`. 
 
@@ -98,7 +98,7 @@ Unfortunately, at the moment you are just working individually. But GitHub still
 6. Confirm that your version of `first.txt` now has the changes you made on the web page
 
 ## 4. Create your first branch
-Branches are a vital part of git and are used so people can work on separate parts of the codebase and not interfere with one another or risk breaking a produect that is visible to the client. Breaking something on one branch does not have an impact on any other.
+Branches are a vital part of git and are used so people can work on separate parts of the codebase and not interfere with one another or risk breaking a product that is visible to the client. Breaking something on one branch does not have an impact on any other.
 
 Good use of git will involve separating parts of the project that can be worked on separately and having them in their own feature branch. These branches can then be merged when they are ready.
 
