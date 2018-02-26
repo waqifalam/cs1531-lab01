@@ -305,6 +305,22 @@ The `test.sh` file is a combination of both the python and the git test scripts.
 # Show your tutor and finish
 That's it for the first lab, please show your tutor your work and get them to mark you off.
 
+# Optional Exercises for Bonus
+There are 3 optional exercises in the files
+
+1. `numOccurrencesOfWordInString.py` - you find the number of occurrences of a string within another string, with occurrences allowed to overlap
+2. `fib.py` - you produce a list of fibannaci numbers of size n, where n is provided
+3. `commandLineCalc_easy.py` - you use the Python3 `eval` function to calculate a basic mathematical expression containing addition/subtraction/multiplication/division/exponentiation. You have to filter invalid input to prevent cross-side scripting
+
+For each of these files, run it as a program in the following fashion
+```
+python3 numOccurrencesOfWordInString.py
+```
+
+If nothing shows up and the program finishes, then all the tests have passed! Otherwise, test failure output will appear, and you should read through this test output to understand where you went wrong.
+
+These exercises are bonuses intended for those of you who have some previous programming experience.
+
 # Assessible Content
 Things discussed in this lab and the assessments associated with them:
  - Github use in the group project
