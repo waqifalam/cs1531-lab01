@@ -1,11 +1,16 @@
 
 # Introduction to GitHub
-# Setup
+## Aim
+1. To set up and become familiar with the course practices for lab/assignment release
+2. Get an introduction into how to use git effectively
+3. Learn some basic python syntax/practices
+# Setup <small>(Due: Start of Wk 2 Lab)</small> 
 ## 1. Sign up for GitHub 
 Github is a version control platform (like Bitbucket of GitLab) that uses git. It is a great way for developers to collaborate with one another. It will be the primary source of starter code distribution as well as where you will submit labs/assignments for automarking before being marked by your tutors. You will have to create an account here before you can start. Getting familiar with Github and how to use is is the aim of this lab.
 
 **Summary:** 
  - I DON'T have an account on Github: Create an account at Github using your student (zID@unsw.edu.au) email.
+	 - **Make sure to verify your email address**
  - I ALREADY have an account on Github: Continue to the next step.
 
 ## 2. CS1531 Github Organisation Membership
@@ -25,13 +30,38 @@ Option 1 can get quite tedious when working consistently so we will be using the
 **Summary:**
  1. `ssh-keygen -t rsa -C "github_email@example.com"`
  2. Hit Enter 3 times to accept default location and skip the password creation step.
- 3. `cat ~/.ssh/id_rsa`
- 4. Copy the entire output of the above command, including the ssh-rsa at the start
+ 3. `cat ~/.ssh/id_rsa.pub`
+ 4. Copy the entire output of the above command, including the *ssh-rsa* at the start
  5. Go to https://github.com/settings/keys and click **New SSH Key**
  6. Enter your name as the title and paste the key (copied in the above step) into the text field
  
-# Laboratory
+# Laboratory <small>(Due: In of Wk 2 Lab)	
 
+## 0. Install git
+Throughout the course you will need to be comfortable with git. It comes pre-installed on most linux  releases and is already installed on the CSE machines. To check if git is installed on your local machine use the command
+```bash
+git status
+```
+If it is installed you will see something like
+> fatal: Not a git repository (or any of the parent directories):
+
+If you do not have git installed, you will see something like
+> bash: git: command not recognized
+
+If this is the case, you will have to set it up using the following instructions
+**Linux** - Follow instructions at https://git-scm.com/download/linux
+**Mac** - `brew install git`
+
+We also have to configure the installation. Instructions on how to do this are in the summary section.
+
+**Summary:**
+1. Try `git status` to check whether git is installed
+	- If not, follow one of the above instructions depending on your OS
+2. Configure git if you have not used it before with the following commands (including the quotes)
+```bash
+git config --global user.name "Your Name" 
+git config --global user.email "github_email@example.com"
+```
 ## 1. Clone your first repo
 Cloning a repo is how the codebase is linked from GitHub to your local computer so changes you make can be saved and shared with others. It is the final step before you can start making changes and contributing. A repo can be cloned at any time by someone who has access, so they can start working at any time. When a repo is cloned, all code that is uploaded on the server is copied to a desired location on your local machine.
 
@@ -191,7 +221,8 @@ We would then just commit the resolved file and the merge conflict is finished!
 1. Open the `first.txt` file and decide which (or both) changes you want to keep
 2. Remove the merge conflict syntax
 3. Add, commit and push the resolved merge conflict
-
+## Testing
+You can run the `test_git.sh` file to check whether you have done most of the git exercises. Make sure you checkout the master branch before running this script.
 # Python Introduction
 Create a new branch called `python_exercises` to complete the following exercises. Remember to merge back into master when you are finished.
 ## 1. Hello World
@@ -238,6 +269,7 @@ print(test[0:3]) # Will print 'hey'
 print(test[:3]) # Will print 'hey' since an empty begin defaults to 0
 
 print(test[:-1]) # Will print 'hey there you'
+print(test[1:]) # Will pring 'ey there you!' since empty end defaults to the end
 ```
 **Note:** The same syntax can be used for elements in a list
 
@@ -258,7 +290,16 @@ print(' '.join(strings))
 5. Commit your changes to GitHub
 6. Merge your `python_exercises` branch into `master`
 
+## Testing
+The `test_python.sh` file has some simple tests for testing the above python exercises. Run it using the following command:
+```bash
+./test_python.sh
+```
 
+The `test.sh` file is a combination of both the python and the git test scripts. To test the entire lab at once you can use
+```bash
+./test.sh
+``` 
 # Show your tutor and finish
 That's it for the first lab, please show your tutor your work and get them to mark you off.
 
