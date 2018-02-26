@@ -1,10 +1,12 @@
 
+
 # Introduction to GitHub
 ## Aim
 1. To set up and become familiar with the course practices for lab/assignment release
 2. Get an introduction into how to use git effectively
 3. Learn some basic python syntax/practices
-# Setup <small>(Due: Start of Wk 2 Lab)</small> 
+
+# Setup <small>(Due: Prior to Wk 2 Lab)</small> 
 ## 1. Sign up for GitHub 
 Github is a version control platform (like Bitbucket of GitLab) that uses git. It is a great way for developers to collaborate with one another. It will be the primary source of starter code distribution as well as where you will submit labs/assignments for automarking before being marked by your tutors. You will have to create an account here before you can start. Getting familiar with Github and how to use is is the aim of this lab.
 
@@ -35,7 +37,7 @@ Option 1 can get quite tedious when working consistently so we will be using the
  5. Go to https://github.com/settings/keys and click **New SSH Key**
  6. Enter your name as the title and paste the key (copied in the above step) into the text field
  
-# Laboratory <small>(Due: In of Wk 2 Lab)	
+# Laboratory <small>(Due: In Wk 2 Lab)</small>
 
 ## 0. Install git
 Throughout the course you will need to be comfortable with git. It comes pre-installed on most linux  releases and is already installed on the CSE machines. To check if git is installed on your local machine use the command
