@@ -20,7 +20,7 @@ def numPossibleOccurrences(s, sub_str):
     >>> numPossibleOccurrences("aaa", "aa")
     2
     >>> numPossibleOccurrences("aaa", "aaa")
-    0
+    1
     '''
     # TODO = fill in this function, and return correct result
     pass
