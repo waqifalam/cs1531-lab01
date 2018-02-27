@@ -323,8 +323,3 @@ python3 numOccurrencesOfWordInString.py
 If nothing shows up and the program finishes, then all the tests have passed! Otherwise, test failure output will appear, and you should read through this test output to understand where you went wrong.
 
 These exercises are bonuses intended for those of you who have some previous programming experience.
-
-# Assessible Content
-Things discussed in this lab and the assessments associated with them:
- - Github use in the group project
- - General python use in labs/assignment/project/exam
