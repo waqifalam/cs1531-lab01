@@ -36,7 +36,8 @@ Option 1 can get quite tedious when working consistently so we will be using the
  3. `cat ~/.ssh/id_rsa.pub`
  4. Copy the entire output of the above command, including the *ssh-rsa* at the start
  5. Go to https://github.com/settings/keys and click **New SSH Key**
- 6. Enter your name as the title and paste the key (copied in the above step) into the text field
+ 6. Enter your name as the title and paste the key (copied in the above step) into the text field. It should look something like below
+ ![enter image description here](http://www.cse.unsw.edu.au/~cs1531/18s1/labs/lab01/img/new_key.png)
  
  **NOTE:** You will have to repeat this process if you change machines.
  
@@ -78,8 +79,10 @@ This is the process you will follow every lab to get your starter code.
  1. Go to https://cgi.cse.unsw.edu.au/~cs1531/18s1/github/run.cgi/ and got to the Labs tab.
  2. Select lab01 and click **Import**
  3. Follow the link that is shown in the green banner that is flashed at the top of the screen to go to the place where the repo has been imported
- 5. Click on the Clone or download button.
- 6. If the title for the dropdown box is *Clone with HTTPS* click on the Use SSH link on the right
+ 4. Click on the Clone or download button.
+ ![Click the Green Button](http://www.cse.unsw.edu.au/~cs1531/18s1/labs/lab01/img/buttons.png)
+ 6. If the title for the dropdown box is *Clone with HTTPS* click on the Use SSH link on the right. The box should look like the below
+ ![enter image description here](http://www.cse.unsw.edu.au/~cs1531/18s1/labs/lab01/img/clone.png)
  7. Copy the link in the text box
  8. Open a Terminal and navigate to the folder you want the lab to be in
  9. `git clone [link]` (Replace [link] with the copied link from above step)
