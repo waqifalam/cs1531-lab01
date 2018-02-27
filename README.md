@@ -55,8 +55,8 @@ If you do not have git installed, you will see something like
 > bash: git: command not recognized
 
 If this is the case, you will have to set it up using the following instructions
-**Linux** - Follow instructions at https://git-scm.com/download/linux
-**Mac** - `brew install git`
+ - **Linux** - Follow instructions at https://git-scm.com/download/linux
+ - **Mac** - `brew install git`
 
 We also have to configure the installation. Instructions on how to do this are in the summary section.
 
