@@ -1,4 +1,4 @@
-
+# Lab 01
 
 
 # Introduction to GitHub
@@ -41,8 +41,8 @@ Option 1 can get quite tedious when working consistently so we will be using the
  
  **NOTE:** You will have to repeat this process if you change machines.
  
-# Laboratory <small>(Due: In Wk 2 Lab)</small>
-
+# Lab 01 <small>(Due: In Wk 2 Lab)</small>
+## Github Exercises (5 marks)
 ## 0. Install git
 Throughout the course you will need to be comfortable with git. It comes pre-installed on most linux releases and is already installed on the CSE machines. To check if git is installed on your local machine use the command
 ```bash
@@ -233,7 +233,7 @@ We would then just commit the resolved file and the merge conflict is finished!
 You can run the `test_git.sh` file to check whether you have done most of the git exercises. Make sure you checkout the master branch before running this script.
 # Python Introduction
 Create a new branch called `python_exercises` to complete the following exercises. Remember to merge back into master when you are finished.
-## 1. Hello World
+## 1. Hello World (1 mark)
 You have been introduced to python in week 1 so we will just get familiar with creating and running simple python programs. Python is an interpreted language so does not require and compilation like C does. That means executing python programs is as simple as one command.
 
 **Summary:**
@@ -245,7 +245,7 @@ python3 hello.py
 ```
 4. Commit your changes to git
 
-## 2. Integer addition
+## 2. Integer addition (2 marks)
 Python lists are probably the most used data structure that comes out of the box with python. They are somewhat similar to C arrays in the idea that they are a collection of data (hence data structure) but have a lot of extra functionality built in. One of the most useful things is their ability to grow dynamically. There is no need to declare the size of a list when creating it.
 
 We will use a list  to add up some integers in this exercise. (HINT: the python documentation is extensive and tells you how to use many of the in built functionality. https://docs.python.org/3.6/tutorial/datastructures.html )
@@ -260,7 +260,7 @@ print(sum(integers))
 ```
 5. Note that the answers should be the same. This is an example of one of python's inbuilt functions. The lesson here is if you are doing something that you feel like is something that a lot of people would have wanted to do before you (like adding a list of numbers), python probably has a way to do it already. CHECK THE DOCS!
 
-## 3. List of Strings
+## 3. List of Strings (2 marks)
 Strings in python are far simpler than int C (char*) and can be used like any other variable (ie added to lists). They also have a lot of in built functionality like concatenation (appending one string to another) and making all characters lower case.
 
 Strings can be indexed from with both positive indexes. Positive indexes work like you would expect, starting at 0 and ending at the length of the string. Negative indexes start at -1 and work their way from the back. Note that strings in python are not null terminated.
@@ -311,7 +311,7 @@ The `test.sh` file is a combination of both the python and the git test scripts.
 # Show your tutor and finish
 That's it for the first lab, please show your tutor your work and get them to mark you off.
 
-# Optional Exercises for Bonus (Due: In Wk 2 Lab)
+# Optional Exercises for Bonus (Due: In Wk 2 Lab) (1 mark)
 There are 2 optional exercises in the files
 
 1. `fib.py` - you produce a list of fibannaci numbers of size n, where n is provided
