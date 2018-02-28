@@ -311,7 +311,7 @@ The `test.sh` file is a combination of both the python and the git test scripts.
 # Show your tutor and finish
 That's it for the first lab, please show your tutor your work and get them to mark you off.
 
-# Optional Exercises for Bonus
+# Optional Exercises for Bonus (Due: In Wk 2 Lab)
 There are 2 optional exercises in the files
 
 1. `fib.py` - you produce a list of fibannaci numbers of size n, where n is provided
