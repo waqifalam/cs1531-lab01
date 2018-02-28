@@ -32,7 +32,7 @@ Option 1 can get quite tedious when working consistently so we will be using the
 
 **Summary:**
  1. `ssh-keygen -t rsa -C "github_email@example.com"`
- 2. Hit Enter 3 times to accept default location and skip the password creation step.
+ 2. Hit Enter 3 times to accept default location and skip the password creation step. (You can **ignore** the output of this command)
  3. `cat ~/.ssh/id_rsa.pub`
  4. Copy the entire output of the above command, including the *ssh-rsa* at the start
  5. Go to https://github.com/settings/keys and click **New SSH Key**
@@ -44,7 +44,7 @@ Option 1 can get quite tedious when working consistently so we will be using the
 # Laboratory <small>(Due: In Wk 2 Lab)</small>
 
 ## 0. Install git
-Throughout the course you will need to be comfortable with git. It comes pre-installed on most linux  releases and is already installed on the CSE machines. To check if git is installed on your local machine use the command
+Throughout the course you will need to be comfortable with git. It comes pre-installed on most linux releases and is already installed on the CSE machines. To check if git is installed on your local machine use the command
 ```bash
 git status
 ```
@@ -204,7 +204,7 @@ A merge conflict is physically shown in the file in which it occurs.
 
 Eg
 ```
-This line could be marged automatically.
+This line could be merged automatically.
 There was no change here either
 >>>>>>> current:sample.txt
 Merges are too hard. This change was on the 'merged into' branch
@@ -217,7 +217,7 @@ This is another line that could be merged automatically
 This above example could be solved in many ways, one way would be to just use the changes made on the target branch and delete those made on the current branch. Once we have decided on this we just need to remove the syntax. The resolved file would be as follows
 
 ```
-This line could be marged automatically.
+This line could be merged automatically.
 There was no change here either
 Merges are easy. This change was made on the 'merged' branch
 This is another line that could be merged automatically
