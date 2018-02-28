@@ -32,7 +32,7 @@ Option 1 can get quite tedious when working consistently so we will be using the
 
 **Summary:**
  1. `ssh-keygen -t rsa -C "github_email@example.com"`
- 2. Hit Enter 3 times to accept default location and skip the password creation step.
+ 2. Hit Enter 3 times to accept default location and skip the password creation step. (You can **ignore** the output of this command)
  3. `cat ~/.ssh/id_rsa.pub`
  4. Copy the entire output of the above command, including the *ssh-rsa* at the start
  5. Go to https://github.com/settings/keys and click **New SSH Key**
@@ -44,7 +44,7 @@ Option 1 can get quite tedious when working consistently so we will be using the
 # Laboratory <small>(Due: In Wk 2 Lab)</small>
 
 ## 0. Install git
-Throughout the course you will need to be comfortable with git. It comes pre-installed on most linux  releases and is already installed on the CSE machines. To check if git is installed on your local machine use the command
+Throughout the course you will need to be comfortable with git. It comes pre-installed on most linux releases and is already installed on the CSE machines. To check if git is installed on your local machine use the command
 ```bash
 git status
 ```
@@ -204,7 +204,7 @@ A merge conflict is physically shown in the file in which it occurs.
 
 Eg
 ```
-This line could be marged automatically.
+This line could be merged automatically.
 There was no change here either
 >>>>>>> current:sample.txt
 Merges are too hard. This change was on the 'merged into' branch
@@ -217,7 +217,7 @@ This is another line that could be merged automatically
 This above example could be solved in many ways, one way would be to just use the changes made on the target branch and delete those made on the current branch. Once we have decided on this we just need to remove the syntax. The resolved file would be as follows
 
 ```
-This line could be marged automatically.
+This line could be merged automatically.
 There was no change here either
 Merges are easy. This change was made on the 'merged' branch
 This is another line that could be merged automatically
@@ -311,16 +311,15 @@ The `test.sh` file is a combination of both the python and the git test scripts.
 # Show your tutor and finish
 That's it for the first lab, please show your tutor your work and get them to mark you off.
 
-# Optional Exercises for Bonus
-There are 3 optional exercises in the files
+# Optional Exercises for Bonus (Due: In Wk 2 Lab)
+There are 2 optional exercises in the files
 
-1. `numOccurrencesOfWordInString.py` - you find the number of occurrences of a string within another string, with occurrences allowed to overlap
-2. `fib.py` - you produce a list of fibannaci numbers of size n, where n is provided
-3. `commandLineCalc_easy.py` - you use the Python3 `eval` function to calculate a basic mathematical expression containing addition/subtraction/multiplication/division/exponentiation. You have to filter invalid input to prevent cross-side scripting
+1. `fib.py` - you produce a list of fibannaci numbers of size n, where n is provided
+2. `commandLineCalc_easy.py` - you use the Python3 `eval` function to calculate a basic mathematical expression containing addition/subtraction/multiplication/division/exponentiation. You have to filter invalid input to prevent cross-side scripting
 
 For each of these files, run it as a program in the following fashion
 ```
-python3 numOccurrencesOfWordInString.py
+python3 fib.py
 ```
 
 If nothing shows up and the program finishes, then all the tests have passed! Otherwise, test failure output will appear, and you should read through this test output to understand where you went wrong.
