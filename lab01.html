@@ -10,12 +10,22 @@
 
 <body class="stackedit">
   <div class="stackedit__html"><h1 id="introduction-to-github">Introduction to GitHub</h1>
-<h1 id="setup">Setup</h1>
-<h2 id="sign-up-for-github--browser">1. Sign up for GitHub  browser</h2>
+<h2 id="aim">Aim</h2>
+<ol>
+<li>To set up and become familiar with the course practices for lab/assignment release</li>
+<li>Get an introduction into how to use git effectively</li>
+<li>Learn some basic python syntax/practices</li>
+</ol>
+<h1 id="setup-smalldue-prior-to-wk-2-labsmall">Setup <small>(Due: Prior to Wk 2 Lab)</small></h1>
+<h2 id="sign-up-for-github">1. Sign up for GitHub</h2>
 <p>Github is a version control platform (like Bitbucket of GitLab) that uses git. It is a great way for developers to collaborate with one another. It will be the primary source of starter code distribution as well as where you will submit labs/assignments for automarking before being marked by your tutors. You will have to create an account here before you can start. Getting familiar with Github and how to use is is the aim of this lab.</p>
 <p><strong>Summary:</strong></p>
 <ul>
-<li>I DON’T have an account on Github: Create an account at Github using your student (<a href="mailto:zID@unsw.edu.au">zID@unsw.edu.au</a>) email.</li>
+<li>I DON’T have an account on Github: Create an account at Github using your student (<a href="mailto:zID@student.unsw.edu.au">zID@student.unsw.edu.au</a>) email.
+<ul>
+<li><strong>Make sure to verify your email address</strong></li>
+</ul>
+</li>
 <li>I ALREADY have an account on Github: Continue to the next step.</li>
 </ul>
 <h2 id="cs1531-github-organisation-membership">2. CS1531 Github Organisation Membership</h2>
@@ -29,30 +39,64 @@
 <p>There are two ways to authenticate with Github when you are working on your own machine:</p>
 <ol>
 <li>Use your username and password everytime</li>
-<li>Authenticate using your SSH key</li>
+<li>Authenticate using your SSH key which effectively links a certain machine to Github</li>
 </ol>
 <p>Option 1 can get quite tedious when working consistently so we will be using the second option. Open up a terminal and run the following commands in terminal (use the email you have used for GitHub):</p>
 <p><strong>Summary:</strong></p>
 <ol>
 <li><code>ssh-keygen -t rsa -C "github_email@example.com"</code></li>
 <li>Hit Enter 3 times to accept default location and skip the password creation step.</li>
-<li><code>cat ~/.ssh/id_rsa</code></li>
-<li>Copy the entire output of the above command, including the ssh-rsa at the start</li>
+<li><code>cat ~/.ssh/id_rsa.pub</code></li>
+<li>Copy the entire output of the above command, including the <em>ssh-rsa</em> at the start</li>
 <li>Go to <a href="https://github.com/settings/keys">https://github.com/settings/keys</a> and click <strong>New SSH Key</strong></li>
-<li>Enter your name as the title and paste the key (copied in the above step) into the text field</li>
+<li>Enter your name as the title and paste the key (copied in the above step) into the text field. It should look something like below<br>
+<img src="http://www.cse.unsw.edu.au/~cs1531/18s1/labs/lab01/img/new_key.png" alt="enter image description here"></li>
 </ol>
-<h1 id="laboratory">Laboratory</h1>
+<p><strong>NOTE:</strong> You will have to repeat this process if you change machines.</p>
+<h1 id="laboratory-smalldue-in-wk-2-labsmall">Laboratory <small>(Due: In Wk 2 Lab)</small></h1>
+<h2 id="install-git">0. Install git</h2>
+<p>Throughout the course you will need to be comfortable with git. It comes pre-installed on most linux  releases and is already installed on the CSE machines. To check if git is installed on your local machine use the command</p>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">git</span> status
+</code></pre>
+<p>If it is installed you will see something like</p>
+<blockquote>
+<p>fatal: Not a git repository (or any of the parent directories):</p>
+</blockquote>
+<p>If you do not have git installed, you will see something like</p>
+<blockquote>
+<p>bash: git: command not recognized</p>
+</blockquote>
+<p>If this is the case, you will have to set it up using the following instructions</p>
+<ul>
+<li><strong>Linux</strong> - Follow instructions at <a href="https://git-scm.com/download/linux">https://git-scm.com/download/linux</a></li>
+<li><strong>Mac</strong> - <code>brew install git</code></li>
+</ul>
+<p>We also have to configure the installation. Instructions on how to do this are in the summary section.</p>
+<p><strong>Summary:</strong></p>
+<ol>
+<li>Try <code>git status</code> to check whether git is installed
+<ul>
+<li>If not, follow one of the above instructions depending on your OS</li>
+</ul>
+</li>
+<li>Configure git if you have not used it before with the following commands (including the quotes)</li>
+</ol>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">git</span> config --global user.name <span class="token string">"Your Name"</span> 
+<span class="token function">git</span> config --global user.email <span class="token string">"github_email@example.com"</span>
+</code></pre>
 <h2 id="clone-your-first-repo">1. Clone your first repo</h2>
-<p>Cloning a repo is how the codebase is linked from GitHub to your local computer so changes you make can be saved and shared with others. It is the final step before you can start making changes and contributing. A repo can be cloned at any time by someone who has access, so they can start working at any time. When a repo is cloned, all code that is uploaded on the server is copied to a desired location on your local machine.</p>
-<p>In this course, starter code will be distributed through <a href="https://cgi.cse.unsw.edu.au/~cs1531/18s1/github/run.cgi/">https://cgi.cse.unsw.edu.au/~cs1531/18s1/github/run.cgi/</a>. As labs get released, the dropdown menu will populate with starter code options. When you select one and click  the starter code will be imported to your local github account.</p>
+<p>Cloning a <strong>repo</strong> (a repo is just a directory that is linked with git) is how the codebase is linked from GitHub to your local computer so changes you make can be saved and shared with others. It is the final step before you can start making changes and contributing. A repo can be cloned at any time by someone who has access, so they can start working whenever they want. When a repo is cloned, all code that is uploaded on the server is copied to a desired location on your local machine.</p>
+<p>In this course, starter code will be distributed through <a href="https://cgi.cse.unsw.edu.au/~cs1531/18s1/github/run.cgi/">https://cgi.cse.unsw.edu.au/~cs1531/18s1/github/run.cgi/</a>. As labs get released, the dropdown menu will populate with starter code options. When you select one and the starter code will be imported to your local github account.</p>
 <p>This is the process you will follow every lab to get your starter code.</p>
 <p><strong>Summary:</strong></p>
 <ol>
 <li>Go to <a href="https://cgi.cse.unsw.edu.au/~cs1531/18s1/github/run.cgi/">https://cgi.cse.unsw.edu.au/~cs1531/18s1/github/run.cgi/</a> and got to the Labs tab.</li>
 <li>Select lab01 and click <strong>Import</strong></li>
-<li>Copy the link that is shown in the green banner that is flashed at the top of the screen to go to the place where the repo has been imported</li>
-<li>Click on the Clone or download button.</li>
-<li>If the title for the dropdown box is <em>Clone with HTTPS</em> click on the Use SSH link on the right</li>
+<li>Follow the link that is shown in the green banner that is flashed at the top of the screen to go to the place where the repo has been imported</li>
+<li>Click on the Clone or download button.<br>
+<img src="http://www.cse.unsw.edu.au/~cs1531/18s1/labs/lab01/img/buttons.png" alt="Click the Green Button"></li>
+<li>If the title for the dropdown box is <em>Clone with HTTPS</em> click on the Use SSH link on the right. The box should look like the below<br>
+<img src="http://www.cse.unsw.edu.au/~cs1531/18s1/labs/lab01/img/clone.png" alt="enter image description here"></li>
 <li>Copy the link in the text box</li>
 <li>Open a Terminal and navigate to the folder you want the lab to be in</li>
 <li><code>git clone [link]</code> (Replace [link] with the copied link from above step)</li>
@@ -73,9 +117,8 @@
 <p><strong>Summary:</strong></p>
 <ol>
 <li>Add a new file called <code>first.txt</code> in the repo directory</li>
-<li>Add a line of text to the bottom of the first.txt file in the repo you have just cloned using your favourite text editor and save.</li>
+<li>Add a line of text to the first.txt file using your favourite text editor and save.</li>
 <li>Go back to your terminal and enter the following commands:</li>
-<li></li>
 </ol>
 <pre class=" language-bash"><code class="prism  language-bash"><span class="token function">git</span> add first.txt`
 <span class="token function">git</span> commit -m<span class="token string">"Added a line to the first file"</span>
@@ -85,8 +128,22 @@
 <li>MAKE SURE YOU UNDERSTAND THE PURPOSE OF EACH OF THE 3 ABOVE COMMANDS! If you are unsure about any of them, ask your tutor.</li>
 <li>Go back to GitHub and confirm that your changes have been pushed to the server.</li>
 </ol>
-<h2 id="create-your-first-branch">3. Create your first branch</h2>
-<p>Branches are a vital part of git and are used so people can work on separate parts of the codebase and not interfere with one another or risk breaking a produect that is visible to the client. Breaking something on one branch does not have an impact on any other.</p>
+<h2 id="do-your-first-pull">3. Do your first pull</h2>
+<p>Usually when you are using git, it is in a team. That means that you will not be the only one who is making the changes. If someone else makes a change and pushes it to the server, your local repo will not have the most up to date version of the files. Luckily, git makes it easy to update our local copy with the <code>git pull</code> command.</p>
+<p>This command checks the remote server that your local repo is linked to and makes sure that all of your files are up to date. This ensures that you don’t accidentally do things like implement the same thing someone else has already done and also lets you use other peoples work (eg new functions) when developing.</p>
+<p>Pulling regularly is one of the <strong>most important</strong> practices in git!</p>
+<p>Unfortunately, at the moment you are just working individually. But GitHub still gives us a nice way to practice a <code>git pull</code>.</p>
+<p><strong>Summary:</strong></p>
+<ol>
+<li>View your repo on GitHub. (The same link as step 1 in section 1 of the Laboratory activities)</li>
+<li>Click on the <code>first.txt</code> file</li>
+<li>Click the small ‘edit’ pencil icon in the top right</li>
+<li>Make any change you want to this file and click the ‘Commit Changes’ button at the bottom of the screen</li>
+<li>This will have changed the <code>first.txt</code> file on the server but not on your local environment. To fetch these changes use the <code>git pull</code> command from your terminal</li>
+<li>Confirm that your version of <code>first.txt</code> now has the changes you made on the web page</li>
+</ol>
+<h2 id="create-your-first-branch">4. Create your first branch</h2>
+<p>Branches are a vital part of git and are used so people can work on separate parts of the codebase and not interfere with one another or risk breaking a product that is visible to the client. Breaking something on one branch does not have an impact on any other.</p>
 <p>Good use of git will involve separating parts of the project that can be worked on separately and having them in their own feature branch. These branches can then be merged when they are ready.</p>
 <p>Useful commands for branches:</p>
 <pre class=" language-bash"><code class="prism  language-bash"><span class="token function">git</span> checkout -b <span class="token punctuation">[</span>new_branch_name<span class="token punctuation">]</span> <span class="token comment"># Create a new branch and switch to it</span>
@@ -106,9 +163,9 @@ This means that the branch you tried to make a change on doesn’t exist on the 
 <li><code>git push -u origin first_new_branch</code></li>
 </ol>
 <p><strong>Note:</strong> The final step above must be run on the 1st push to every new branch that you have created on your local machine. After you have run this once, you should go back to simply using git push</p>
-<h2 id="merge-your-two-branches">4. Merge your two branches</h2>
+<h2 id="merge-your-two-branches">5. Merge your two branches</h2>
 <p>Merging branches is used to combine the work done on two different branches and is where gits magic really comes in. Git will compare the changes done on both branches and decide (based on what changes were done to what sections of the file and when) what to keep. Merges are most often done when a feature branch is complete and ready to be integrated with the master branch.</p>
-<p>Since we have finished all that we are going to do (and think there are no bugs) on our first_new_branch we can merge it back into master. It is a strong recommendation to have a version of the code that at least runs on master so people are not completely blocked. (DO NOT PUSH BROKEN CODE TO MASTER)</p>
+<p>Since we have finished all that we are going to do (and think there are no bugs) on our <em>first_new_branch</em> we can merge it back into master. It is a strong recommendation to have a version of the code that at least runs on master so people are not completely blocked. (DO NOT PUSH BROKEN CODE TO MASTER)</p>
 <p>Another recommendation is to merge master into your branch before merging your branch into master as this will ensure that any merge into master will go smoothly.</p>
 <p><strong>Commands for merging two branches</strong></p>
 <pre class=" language-bash"><code class="prism  language-bash"><span class="token function">git</span> merge <span class="token punctuation">[</span>target<span class="token punctuation">]</span> <span class="token comment"># Merge the target branch into current</span>
@@ -121,28 +178,51 @@ This means that the branch you tried to make a change on doesn’t exist on the 
 <code>git merge first_new_branch</code></li>
 <li>Push the successful merge to the server to update the master branch on the server</li>
 </ol>
-<h2 id="engineer-a-merge-conflict-">5. Engineer a merge conflict :(</h2>
+<h2 id="engineer-a-merge-conflict-">6. Engineer a merge conflict :(</h2>
 <p>Merge conflicts are the one necessary downside to git. Luckily, they can be avoided most of the time through good use of techniques like branches and regular commits, pushes and pulls. They happen when git cannot work out which particular change to a file you really want.</p>
 <p>For this step we will engineer one so you can get a taste of what they are, how they occur and how to fix them. This will be the LAST time you will want one. The process may seem involved but it is quite common when multiple people are working at a time.</p>
 <p><strong>Summary:</strong> (All commands have been presented above)</p>
 <ol>
 <li>Add a line to the top of the <code>first.txt</code> file</li>
 <li>Add, commit and push your changes</li>
-<li>Switch to your first_new_branch</li>
+<li>Switch to your <em>first_new_branch</em></li>
 <li>Add a different line to the top of the <code>first.txt</code> file</li>
 <li>Add, commit and push your changes</li>
 <li>Merge master into your current branch</li>
 <li>This sequence of steps should made a merge conflict at the top of the <code>first.txt</code></li>
 </ol>
-<h2 id="resolve-your-merge-conflict-">6. Resolve your merge conflict :)</h2>
+<h2 id="resolve-your-merge-conflict-">7. Resolve your merge conflict :)</h2>
 <p>Resolving a merge conflict is as simple as editing the file normally, choosing what you want to have in the places git wasn’t sure.</p>
 <p>This is a very simple example, but merge conflicts can be large and in many different places across a file/repo. If possible, avoid merge conflicts. This can be done by regularly pulling from the server to update your local copy and by making your branches in such a way that they handle only one feature/section of the code.</p>
+<p>A merge conflict is physically shown in the file in which it occurs.<br>
+<code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> marks the beginning of the conflicting changes made on the <strong>current</strong> (merged into) branch.<br>
+<code>=======</code> marks the beginning of the conflicting changes made on the <strong>target</strong> (merged) branch.<br>
+<code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> marks the end of the conflict zone.</p>
+<p>Eg</p>
+<pre><code>This line could be marged automatically.
+There was no change here either
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; current:sample.txt
+Merges are too hard. This change was on the 'merged into' branch
+=======
+Merges are easy. This change was made on the 'merged' branch
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; target:sample.txt
+This is another line that could be merged automatically
+</code></pre>
+<p>This above example could be solved in many ways, one way would be to just use the changes made on the target branch and delete those made on the current branch. Once we have decided on this we just need to remove the syntax. The resolved file would be as follows</p>
+<pre><code>This line could be marged automatically.
+There was no change here either
+Merges are easy. This change was made on the 'merged' branch
+This is another line that could be merged automatically
+</code></pre>
+<p>We would then just commit the resolved file and the merge conflict is finished!</p>
 <p><strong>Summary:</strong></p>
 <ol>
 <li>Open the <code>first.txt</code> file and decide which (or both) changes you want to keep</li>
 <li>Remove the merge conflict syntax</li>
 <li>Add, commit and push the resolved merge conflict</li>
 </ol>
+<h2 id="testing">Testing</h2>
+<p>You can run the <code>test_git.sh</code> file to check whether you have done most of the git exercises. Make sure you checkout the master branch before running this script.</p>
 <h1 id="python-introduction">Python Introduction</h1>
 <p>Create a new branch called <code>python_exercises</code> to complete the following exercises. Remember to merge back into master when you are finished.</p>
 <h2 id="hello-world">1. Hello World</h2>
@@ -150,7 +230,7 @@ This means that the branch you tried to make a change on doesn’t exist on the 
 <p><strong>Summary:</strong></p>
 <ol>
 <li>Open the <code>hello.py</code> file.</li>
-<li>Complete the file so it prints “Hello World” on line 2</li>
+<li>Complete the file so it prints “Hello World” on line 1</li>
 <li>Run it from the command line</li>
 </ol>
 <pre class=" language-bash"><code class="prism  language-bash">python3 hello.py
@@ -187,6 +267,7 @@ This means that the branch you tried to make a change on doesn’t exist on the 
 <span class="token keyword">print</span><span class="token punctuation">(</span>test<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment"># Will print 'hey' since an empty begin defaults to 0</span>
 
 <span class="token keyword">print</span><span class="token punctuation">(</span>test<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment"># Will print 'hey there you'</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>test<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment"># Will print 'ey there you!' since empty end defaults to the end</span>
 </code></pre>
 <p><strong>Note:</strong> The same syntax can be used for elements in a list</p>
 <p>The file <code>strings.py</code> has a list of strings that you will need to print out space separated. The <strong>expected output</strong> is:</p>
@@ -207,14 +288,27 @@ This means that the branch you tried to make a change on doesn’t exist on the 
 <li>Commit your changes to GitHub</li>
 <li>Merge your <code>python_exercises</code> branch into <code>master</code></li>
 </ol>
+<h2 id="testing-1">Testing</h2>
+<p>The <code>test_python.sh</code> file has some simple tests for testing the above python exercises. Run it using the following command:</p>
+<pre class=" language-bash"><code class="prism  language-bash">./test_python.sh
+</code></pre>
+<p>The <code>test.sh</code> file is a combination of both the python and the git test scripts. To test the entire lab at once you can use</p>
+<pre class=" language-bash"><code class="prism  language-bash">./test.sh
+</code></pre>
 <h1 id="show-your-tutor-and-finish">Show your tutor and finish</h1>
 <p>That’s it for the first lab, please show your tutor your work and get them to mark you off.</p>
-<h1 id="assessible-content">Assessible Content</h1>
-<p>Things discussed in this lab and the assessments associated with them:</p>
-<ul>
-<li>Github use in the group project</li>
-<li>General python use in labs/assignment/project/exam</li>
-</ul>
+<h1 id="optional-exercises-for-bonus">Optional Exercises for Bonus</h1>
+<p>There are 3 optional exercises in the files</p>
+<ol>
+<li><code>numOccurrencesOfWordInString.py</code> - you find the number of occurrences of a string within another string, with occurrences allowed to overlap</li>
+<li><code>fib.py</code> - you produce a list of fibannaci numbers of size n, where n is provided</li>
+<li><code>commandLineCalc_easy.py</code> - you use the Python3 <code>eval</code> function to calculate a basic mathematical expression containing addition/subtraction/multiplication/division/exponentiation. You have to filter invalid input to prevent cross-side scripting</li>
+</ol>
+<p>For each of these files, run it as a program in the following fashion</p>
+<pre><code>python3 numOccurrencesOfWordInString.py
+</code></pre>
+<p>If nothing shows up and the program finishes, then all the tests have passed! Otherwise, test failure output will appear, and you should read through this test output to understand where you went wrong.</p>
+<p>These exercises are bonuses intended for those of you who have some previous programming experience.</p>
 </div>
 </body>
 
