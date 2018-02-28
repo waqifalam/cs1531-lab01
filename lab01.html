@@ -45,7 +45,7 @@
 <p><strong>Summary:</strong></p>
 <ol>
 <li><code>ssh-keygen -t rsa -C "github_email@example.com"</code></li>
-<li>Hit Enter 3 times to accept default location and skip the password creation step.</li>
+<li>Hit Enter 3 times to accept default location and skip the password creation step. (You can <strong>ignore</strong> the output of this command)</li>
 <li><code>cat ~/.ssh/id_rsa.pub</code></li>
 <li>Copy the entire output of the above command, including the <em>ssh-rsa</em> at the start</li>
 <li>Go to <a href="https://github.com/settings/keys">https://github.com/settings/keys</a> and click <strong>New SSH Key</strong></li>
@@ -55,7 +55,7 @@
 <p><strong>NOTE:</strong> You will have to repeat this process if you change machines.</p>
 <h1 id="laboratory-smalldue-in-wk-2-labsmall">Laboratory <small>(Due: In Wk 2 Lab)</small></h1>
 <h2 id="install-git">0. Install git</h2>
-<p>Throughout the course you will need to be comfortable with git. It comes pre-installed on most linux  releases and is already installed on the CSE machines. To check if git is installed on your local machine use the command</p>
+<p>Throughout the course you will need to be comfortable with git. It comes pre-installed on most linux releases and is already installed on the CSE machines. To check if git is installed on your local machine use the command</p>
 <pre class=" language-bash"><code class="prism  language-bash"><span class="token function">git</span> status
 </code></pre>
 <p>If it is installed you will see something like</p>
@@ -199,7 +199,7 @@ This means that the branch you tried to make a change on doesn’t exist on the 
 <code>=======</code> marks the beginning of the conflicting changes made on the <strong>target</strong> (merged) branch.<br>
 <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> marks the end of the conflict zone.</p>
 <p>Eg</p>
-<pre><code>This line could be marged automatically.
+<pre><code>This line could be merged automatically.
 There was no change here either
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; current:sample.txt
 Merges are too hard. This change was on the 'merged into' branch
@@ -209,7 +209,7 @@ Merges are easy. This change was made on the 'merged' branch
 This is another line that could be merged automatically
 </code></pre>
 <p>This above example could be solved in many ways, one way would be to just use the changes made on the target branch and delete those made on the current branch. Once we have decided on this we just need to remove the syntax. The resolved file would be as follows</p>
-<pre><code>This line could be marged automatically.
+<pre><code>This line could be merged automatically.
 There was no change here either
 Merges are easy. This change was made on the 'merged' branch
 This is another line that could be merged automatically
@@ -297,15 +297,14 @@ This is another line that could be merged automatically
 </code></pre>
 <h1 id="show-your-tutor-and-finish">Show your tutor and finish</h1>
 <p>That’s it for the first lab, please show your tutor your work and get them to mark you off.</p>
-<h1 id="optional-exercises-for-bonus">Optional Exercises for Bonus</h1>
-<p>There are 3 optional exercises in the files</p>
+<h1 id="optional-exercises-for-bonus-due-in-wk-2-lab">Optional Exercises for Bonus (Due: In Wk 2 Lab)</h1>
+<p>There are 2 optional exercises in the files</p>
 <ol>
-<li><code>numOccurrencesOfWordInString.py</code> - you find the number of occurrences of a string within another string, with occurrences allowed to overlap</li>
 <li><code>fib.py</code> - you produce a list of fibannaci numbers of size n, where n is provided</li>
 <li><code>commandLineCalc_easy.py</code> - you use the Python3 <code>eval</code> function to calculate a basic mathematical expression containing addition/subtraction/multiplication/division/exponentiation. You have to filter invalid input to prevent cross-side scripting</li>
 </ol>
 <p>For each of these files, run it as a program in the following fashion</p>
-<pre><code>python3 numOccurrencesOfWordInString.py
+<pre><code>python3 fib.py
 </code></pre>
 <p>If nothing shows up and the program finishes, then all the tests have passed! Otherwise, test failure output will appear, and you should read through this test output to understand where you went wrong.</p>
 <p>These exercises are bonuses intended for those of you who have some previous programming experience.</p>
