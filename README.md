@@ -13,7 +13,9 @@ Github is a version control platform (like Bitbucket of GitLab) that uses git. I
 
 **Summary:** 
  - I DON'T have an account on Github: Create an account at Github using your student (zID@student.unsw.edu.au) email.
-	 - **Make sure to verify your email address**
+	 - **Make sure to verify your email address. If you do not get an email straight away, go to https://github.com/settings/emails and click resend**
+	 
+	 ![enter image description here](http://www.cse.unsw.edu.au/~cs1531/18s1/labs/lab01/img/email_validate.png)
  - I ALREADY have an account on Github: Continue to the next step.
 
 ## 2. CS1531 Github Organisation Membership
