@@ -24,6 +24,7 @@ A Github organisation is a way that people can work together and have group owne
 **Summary:**
  1. Follow the link and sign in with your Github credentials https://cgi.cse.unsw.edu.au/~cs1531/18s1/github/run.cgi/login
 1. Click on the **Setup** button and complete the instructions on the page (should be adding student   email and registering for education pack)
+2. You will have to verify your student email as well before continuing onto the student education pack. If a verification email was not sent automatically, go to https://github.com/settings/emails and click resend (as in the above image)
 
 ## 3. Add your ssh key
 There are two ways to authenticate with Github when you are working on your own machine:
