@@ -22,7 +22,7 @@ Github is a version control platform (like Bitbucket of GitLab) that uses git. I
 A Github organisation is a way that people can work together and have group ownership of repositories. You will be added to our organisation where we will release the starter code and solutions.
 
 **Summary:**
- 1. Follow the link and sign in with your Github credentials https://cgi.cse.unsw.edu.au/~cs1531/18s1/github/run.cgi/login
+ 1. Follow the link and sign in. First with your cse credentials (if the *Authentication required* alert box is shown), then click the **Sign in with Github** button and use your Github credentials https://cgi.cse.unsw.edu.au/~cs1531/18s1/github/run.cgi/login
 1. Click on the **Setup** button and complete the instructions on the page (should be adding student   email and registering for education pack)
 2. You will have to verify your student email as well before continuing onto the student education pack. If a verification email was not sent automatically, go to https://github.com/settings/emails and click resend (as in the above image)
 
