@@ -7,9 +7,8 @@ then
 	success=1
 fi
 
-commits=`git log --format='%p' | wc -w`
-lines=`git log --format='%p' | wc -l`
-if [ "$commits" -lt "$lines" ]
+merges=`git log --merges --format="%aE" | egrep -v 'matt.phillips121@hotmail.com' | egrep -v 'matthew.perry@unsw.edu.au' | wc -l`
+if [ "$merges" -eq 0 ]
 then
 	echo 'You did not do a merge? :( (at least not on this branch)'
 	success=1
