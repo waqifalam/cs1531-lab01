@@ -13,15 +13,18 @@ Github is a version control platform (like Bitbucket of GitLab) that uses git. I
 
 **Summary:** 
  - I DON'T have an account on Github: Create an account at Github using your student (zID@student.unsw.edu.au) email.
-	 - **Make sure to verify your email address**
+	 - **Make sure to verify your email address. If you do not get an email straight away, go to https://github.com/settings/emails and click resend**
+	 
+	 ![enter image description here](http://www.cse.unsw.edu.au/~cs1531/18s1/labs/lab01/img/email_validate.png)
  - I ALREADY have an account on Github: Continue to the next step.
 
 ## 2. CS1531 Github Organisation Membership
 A Github organisation is a way that people can work together and have group ownership of repositories. You will be added to our organisation where we will release the starter code and solutions.
 
 **Summary:**
- 1. Follow the link and sign in with your Github credentials https://cgi.cse.unsw.edu.au/~cs1531/18s1/github/run.cgi/login
+ 1. Follow the link and sign in. First with your cse credentials (if the *Authentication required* alert box is shown), then click the **Sign in with Github** button and use your Github credentials https://cgi.cse.unsw.edu.au/~cs1531/18s1/github/run.cgi/login
 1. Click on the **Setup** button and complete the instructions on the page (should be adding student   email and registering for education pack)
+2. You will have to verify your student email as well before continuing onto the student education pack. If a verification email was not sent automatically, go to https://github.com/settings/emails and click resend (as in the above image)
 
 ## 3. Add your ssh key
 There are two ways to authenticate with Github when you are working on your own machine:
