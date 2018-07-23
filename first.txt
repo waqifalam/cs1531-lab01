@@ -1,3 +1,4 @@
+This was written on master branch
 Conflict :(
 Merge conflict :(
 Hello World!
