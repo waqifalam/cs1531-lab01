@@ -1,3 +1,4 @@
+This was written on first_new_branch
 Merge conflict :(
 Hello World!
 Second Line!
