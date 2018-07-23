@@ -1,3 +1,4 @@
+Merge conflict :(
 Hello World!
 Second Line!
 Added third line!
