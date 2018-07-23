@@ -1,4 +1,6 @@
 This was written on first_new_branch
+This was written on master branch
+Conflict :(
 Merge conflict :(
 Hello World!
 Second Line!
